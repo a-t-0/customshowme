@@ -13,7 +13,7 @@ import inspect
 from time import time as now
 
 
-__version__ = '1.0.8'
+__version__ = '1.0.0'
 __author__ = 'Navdeep Gill'
 __license__ = 'MIT'
 __copyright__ = 'Copyright 2019 Navdeep Gill'

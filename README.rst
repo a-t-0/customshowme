@@ -1,7 +1,7 @@
-ShowMe -- Quick and easy debugging for Python
+customshowme -- Quick and easy debugging for Python
 =============================================
 
-ShowMe is a simple set of extremely useful function decorators for Python.
+customshowme is a simple set of extremely useful function decorators for Python.
 It allows you to view trace information, execution time, cputime, and function
 documentation.
 
@@ -77,36 +77,3 @@ Pretty print function documentation. ::
     >>> complex_function()
     Documentation for __main__.complex_function:
     Example Documentation for complex_function.
-    
-Releasing pip package update
-----------------------------
-
-To udate the Python pip package, one can first satisfy the following requirements:
-
-```bash
-pip install --upgrade pip setuptools wheel
-pip install twine
-```
-
-Followed by updating the package with:
-
-```bash
-python3 setup.py sdist bdist_wheel
-python -m twine upload dist/\*
-```
-
-Developer pip install
----------------------
-
-If you want to quickly test if your changes work, you can go into the root dir
-of this project and run:
-
-```bash
-rm -r dist
-rm -r build
-python3 setup.py sdist bdist_wheel
-pip install -e .
-```
-
-that installs the latest changes into the pip package locally (into your conda
-environment).
