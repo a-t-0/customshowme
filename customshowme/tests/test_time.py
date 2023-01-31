@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import showme
+import customshowme
 
-@showme.time
+@customshowme.time
 def test():
 	"""docstring for test"""
 	for i in range(1000):

@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import showme
+import customshowme
 
-@showme.trace
+@customshowme.trace
 def fname(a, b):
 	"""docstring for fname"""
 	pass

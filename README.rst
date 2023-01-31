@@ -9,13 +9,13 @@ documentation.
 Installation
 ------------
 
-To use **showme**, simply:
+To use **customshowme**, simply:
 
-``pip install showme``
+``pip install customshowme``
 
 or, if you must:
 
-``easy_install showme``
+``easy_install customshowme``
 
 
 Usage
@@ -23,7 +23,7 @@ Usage
 
 Print passed-in arguments and function calls. ::
 
-    @showme.trace
+    @customshowme.trace
     def complex_function(a, b, c, **kwargs):
         ...
     
@@ -36,7 +36,7 @@ Print passed-in arguments and function calls. ::
 
 Print function execution time. ::
 
-    @showme.time
+    @customshowme.time
     def some_function(a):
         ...
     
@@ -46,7 +46,7 @@ Print function execution time. ::
     
 Print function cpu-execution time. ::
 
-    @showme.cputime
+    @customshowme.cputime
     def complex_function(a, b, c):
         ...
 
@@ -62,14 +62,14 @@ Print function cpu-execution time. ::
 
 .. Print local variables available at runtime. ::
 ..  
-..  @showme.locals
+..  @customshowme.locals
 ..  def complex_function(a, b, c):
 ..      ...
 
 
 Pretty print function documentation. ::
     
-    @showme.docs
+    @customshowme.docs
     def complex_function():
         """Example Documentation for complex_function."""
         ...
@@ -78,3 +78,35 @@ Pretty print function documentation. ::
     Documentation for __main__.complex_function:
     Example Documentation for complex_function.
     
+Releasing pip package update
+----------------------------
+
+To udate the Python pip package, one can first satisfy the following requirements:
+
+```bash
+pip install --upgrade pip setuptools wheel
+pip install twine
+```
+
+Followed by updating the package with:
+
+```bash
+python3 setup.py sdist bdist_wheel
+python -m twine upload dist/\*
+```
+
+Developer pip install
+---------------------
+
+If you want to quickly test if your changes work, you can go into the root dir
+of this project and run:
+
+```bash
+rm -r dist
+rm -r build
+python3 setup.py sdist bdist_wheel
+pip install -e .
+```
+
+that installs the latest changes into the pip package locally (into your conda
+environment).

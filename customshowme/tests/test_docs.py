@@ -9,10 +9,10 @@ sample docstring for test
 """
 
 import doctest
-import showme
+import customshowme
 
 
-@showme.docs
+@customshowme.docs
 def test():
 	"""sample docstring for test"""
 	pass

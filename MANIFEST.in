@@ -7,5 +7,5 @@ include NOTICE
 include reqs.txt
 
 recursive-include *.py
-recursive-include showme *
-recursive-include showme/packages *
+recursive-include customshowme *
+recursive-include customshowme/packages *
