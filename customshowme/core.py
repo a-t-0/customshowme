@@ -56,13 +56,13 @@ def time(f, *args, **kwargs):
     #print(('Execution speed of %s%s%s:' % (Fore.CYAN, _get_scope(f, args), Fore.RESET)))
     
     # Display only function name:
-    print(('Execution speed of %s%s%s:' % (Fore.CYAN, _get_scope(f, args).split(".")[-1], Fore.RESET)), end =" ")
+    print(('Execution speed of %s%s%s:' % (Fore.CYAN, _get_scope(f, args).split(".")[-1], Fore.RESET)))
     _t0 = now()
     _r = f(*args, **kwargs)
     _t1 = now()
 
     total_time = _t1 - _t0
-    print(('%s seconds' % (round(total_time,3))))
+    print(('%s%s%s seconds' % (Fore.CYAN, round(total_time,3), Fore.RESET)))
     return _r
 
 

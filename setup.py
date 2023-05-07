@@ -17,7 +17,7 @@ if sys.argv[-1] == 'publish':
 
 setup(
 	name='customshowme',
-	version='1.0.9',
+	version='1.0.11',
 	description='Painless Debugging and Inspection for Python',
 	long_description="TODO: long description",
 	author='Navdeep Gill',
