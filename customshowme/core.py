@@ -51,8 +51,12 @@ def docs(f, *args, **kwargs):
 @decorator
 def time(f, *args, **kwargs):
     """Display Runtime statistics of given function."""
-
-    print(('Execution speed of %s%s%s:' % (Fore.CYAN, _get_scope(f, args), Fore.RESET)))
+    
+    # Display full path to function:
+    #print(('Execution speed of %s%s%s:' % (Fore.CYAN, _get_scope(f, args), Fore.RESET)))
+    
+    # Display only function name:
+    print(('Execution speed of %s%s%s:' % (Fore.CYAN, _get_scope(f, args).split(".")[-1], Fore.RESET)))
     _t0 = now()
     _r = f(*args, **kwargs)
     _t1 = now()
